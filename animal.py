@@ -1,14 +1,28 @@
 class Animal:
 
-    def __init__(self, name, age) -> None:
+    # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
+    def __init__(self, name, age, species, breed, vaccinated, sex, castrated, arrival_date, disabled) -> None:
         self.name = name
         self.age = age
+        self.species = species
+        self.breed = breed
+        self.vaccinated = vaccinated
+        self.sex = sex
+        self.castrated = castrated
+        self.arrival_date = arrival_date
+        self.disabled = disabled
 
-    def getName(self):
-        print(self.name)
+    # Typisieren
+    # Abholung ?
+    def details(self):
+        return {    "name": self.name,
+                    "age": self.age,
+                    "species": self.species,
+                    "breed": self.breed,
+                    "vaccinated": self.vaccinated,
+                    "sex": self.sex,
+                    "castrated": self.castrated,
+                    "arrival": self.arrival_date,
+                    "disabled": self.disabled
+                }
 
-    def getAge(self):
-        print(self.age)
-    
-    def hasBirthday(self):
-        self.age = self.age +1
