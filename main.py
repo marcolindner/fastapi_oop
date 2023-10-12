@@ -4,6 +4,11 @@ from fastapi import FastAPI
 
 app = FastAPI(title="Animal API", version="0.0.1")
 
+# Basis Route
+@app.get("/")
+def get_root():
+    return "Animal API"
+
 # Liste aller Tiere mit Name, Tierart, Einlieferungsdatum
 @app.get("/animals")
 def get_animals():
@@ -15,10 +20,11 @@ def put_animal():
     return None
 
 
-# Details eines Tieres Name, Alter, Geschlecht, geimpft, kastriert
+# Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
 @app.get("/animal/{animalid}")
 def get_animaldetails(animalid):
-    return None
+    return animalid
+    #return None
 
 if(__name__ == "__main__"):
     import uvicorn
