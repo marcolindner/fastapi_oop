@@ -1,31 +1,18 @@
-from animal import Animal, Cat, Dog
-from helper import Helper
+# main.py
 from fastapi import FastAPI
-from put_animal import put_animal
+from routes.root_route import router as root_router
+from routes.animals_route import router as animals_router
+from routes.animal_route import router as animal_router
+from routes.animal_details_route import router as animal_details_router
 
 app = FastAPI(title="Animal API", version="0.0.1")
 
-# Basis Route
-@app.get("/")
-def get_root():
-    return "Animal API"
+app.include_router(root_router)
+app.include_router(animals_router)
+app.include_router(animal_router)
+app.include_router(animal_details_router)
 
-# Liste aller Tiere mit Name, Tierart, Einlieferungsdatum
-@app.get("/animals")
-def get_animals():
-    return None
-
-# Neues Tier anlegen
-@app.put("/animal")
-def put_animal():
-    return None
-
-# Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
-@app.get("/animal/{animalid}")
-def get_animaldetails(animalid):
-    return animalid
-    #return None
-
-if(__name__ == "__main__"):
+if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
