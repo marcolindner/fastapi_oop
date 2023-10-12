@@ -1,6 +1,6 @@
 ## Repo clonen
 ```
-git clone git@github.com/marcolindner/fastapi_oop.git
+git clone git@github.com:marcolindner/fastapi_oop.git
 ```
 
 ## Feature Branch anlegen
