@@ -1,7 +1,8 @@
 class Animal:
 
     # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
-    def __init__(self, name, age, species, breed, vaccinated, sex, castrated, arrival_date, disabled) -> None:
+    def __init__(self,id, name, age, species, breed, vaccinated, sex, castrated, arrival_date, disabled) -> None:
+        self.id = id
         self.name = name
         self.age = age
         self.species = species
@@ -15,7 +16,8 @@ class Animal:
     # Typisieren
     # Abholung ?
     def details(self):
-        return {    "name": self.name,
+        return {    "id": self.name,
+                    "name": self.name,
                     "age": self.age,
                     "species": self.species,
                     "breed": self.breed,
