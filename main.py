@@ -17,8 +17,9 @@ def get_animals():
 
 # Neues Tier anlegen
 @app.put("/animal")
-def put_animal():
-    return None
+def put_animal(animal:Animal):
+    animals.append(animal)
+    return animal
 
 # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
 @app.get("/animal/{animalid}")
