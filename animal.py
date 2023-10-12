@@ -1,6 +1,7 @@
 class Animal:
 
     # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
+    # id ist die UUID(4) von Python - import uuid
     def __init__(self,id, name, age, species, breed, vaccinated, sex, castrated, arrival_date, disabled) -> None:
         self.id = id
         self.name = name

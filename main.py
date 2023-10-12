@@ -1,9 +1,9 @@
-from animal import Animal, Cat, Dog
-from helper import Helper
+from animal import Animal
 from fastapi import FastAPI
-from put_animal import put_animal
 
 app = FastAPI(title="Animal API", version="0.0.1")
+
+animals: list[Animal] = []
 
 # Basis Route
 @app.get("/")
