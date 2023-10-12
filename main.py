@@ -1,6 +1,7 @@
 from animal import Animal, Cat, Dog
 from helper import Helper
 from fastapi import FastAPI
+from put_animal import put_animal
 
 app = FastAPI(title="Animal API", version="0.0.1")
 
@@ -18,7 +19,6 @@ def get_animals():
 @app.put("/animal")
 def put_animal():
     return None
-
 
 # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
 @app.get("/animal/{animalid}")

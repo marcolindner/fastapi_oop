@@ -12,11 +12,3 @@ class Animal:
     
     def hasBirthday(self):
         self.age = self.age +1
-
-class Cat(Animal):
-    def getSound(self):
-        print("miau")
-
-class Dog(Animal):
-    def getSound(self):
-        print("wuw")
