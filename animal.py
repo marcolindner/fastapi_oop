@@ -1,4 +1,4 @@
-class Animal:
+class AnimalModel:
 
     # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
     # id ist die UUID(4) von Python - import uuid

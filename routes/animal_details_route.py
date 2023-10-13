@@ -1,6 +1,6 @@
 # routes/animal_details_route.py
 from fastapi import APIRouter, HTTPException
-from animal import Animal
+from animal import AnimalModel
 from animals import animals
 
 router = APIRouter()
