@@ -1,3 +1,3 @@
-from animal import AnimalModel
+from animalModel import AnimalModel
 
 animalsList: list[AnimalModel] = []
