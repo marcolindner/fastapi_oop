@@ -1,8 +1,6 @@
 from animal import Animal
-from fastapi import FastAPI
-
+from fastapi import FastAPI, HTTPException
 app = FastAPI(title="Animal API", version="0.0.1")
-
 animals: list[Animal] = []
 
 # Basis Route
@@ -24,7 +22,11 @@ def put_animal(animal:Animal):
 # Details eines Tieres Name, Tierart, Einlieferungsdatum, Alter, Geschlecht, geimpft, kastriert
 @app.get("/animal/{animalid}")
 def get_animaldetails(animalid):
-    return animalid
+    print(animalid)
+    for animal in animals:
+        if animal.id == animalid:
+            return animal
+    raise HTTPException(status_code=404, detail="Vieh not found")
     #return None
 
 if(__name__ == "__main__"):
