@@ -1,5 +1,4 @@
-from animal import Animal
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from routes.root_route import router as root_router
 from routes.animals_route import router as animals_router
 from routes.animal_route import router as animal_router
