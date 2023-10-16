@@ -50,7 +50,7 @@ Outputs:
   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
   AnimalApi:
     Description: "API Gateway endpoint URL for Prod stage for Animal function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/dev/"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
   AnimalFunction:
     Description: "Animal Function Lambda ARN"
     Value: !GetAtt AnimalFunction.Arn

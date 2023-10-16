@@ -12,4 +12,7 @@ app.include_router(animals_router)
 app.include_router(animal_router)
 app.include_router(animal_details_router)
 
-handler = Mangum(app)
+#handler = Mangum(app)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
