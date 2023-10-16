@@ -5,7 +5,7 @@ from routes.animal_route import router as animal_router
 from routes.animal_details_route import router as animal_details_router
 from mangum import Mangum
 
-app = FastAPI(title="Animal API", version="0.0.1", openapi_url="/openapi.json")
+app = FastAPI(title="Animal API", version="0.0.1", root_path="/Prod")
 
 app.include_router(root_router)
 app.include_router(animals_router)
