@@ -9,7 +9,7 @@ router = APIRouter()
 # Neues Tier anlegen
 @router.put("/animal", response_model=None)
 def put_animal(animal:AnimalModel):
-    animal.id = str(uuid4())
+    animal.id = str(uuid.uuid4())
     animalsList.append(animal)
     return animal
 
