@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabbed Table</title>
+<style>
+    .tab-content {
+        display: none;
+    }
+    .active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div id="tab-buttons">
+    <button onclick="showTab('students')">Students</button>
+    <button onclick="showTab('teachers')">Teachers</button>
+    <button onclick="showTab('admins')">Admin</button>
+</div>
+
+<div id="students" class="tab-content active">
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Kastriert</th>
+	    <th>Stars</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>YES</td>
+            <td>***</td>
+        </tr>
+        <tr>
+            <td>Jane Beispiel</td>
+            <td>MAYBE</td>
+            <td>**</td>
+        </tr>
+         <tr>
+            <td>Jake Socke</td>
+            <td>SOON</td>
+            <td>****</td>
+        </tr>
+ 
+    </table>
+</div>
+
+<div id="teachers" class="tab-content">
+	CRUD teacher
+</div>
+
+<div id="admins" class="tab-content">
+	(new badge, edit badge, delete badge, asssign)
+</div>
+
+<script>
+    function showTab(tabId) {
+        var contents = document.querySelectorAll('.tab-content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].classList.remove('active');
+        }
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
+
