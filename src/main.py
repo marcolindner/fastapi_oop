@@ -1,15 +1,15 @@
 from fastapi import FastAPI
 from routes.root_route import router as root_router
-from routes.animals_route import router as animals_router
-from routes.animal_route import router as animal_router
-from routes.animal_details_route import router as animal_details_router
+from routes.students_route import router as students_router
+from routes.student_route import router as student_router
+from routes.student_details_route import router as student_details_router
 from mangum import Mangum
 
-app = FastAPI(title="Animal API", version="0.0.1", root_path="/Prod")
+app = FastAPI(title="Student API", version="0.0.1", root_path="/Prod")
 
 app.include_router(root_router)
-app.include_router(animals_router)
-app.include_router(animal_router)
-app.include_router(animal_details_router)
+app.include_router(students_router)
+app.include_router(student_router)
+app.include_router(student_details_router)
 
 handler = Mangum(app)
