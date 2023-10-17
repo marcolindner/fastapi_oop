@@ -5,5 +5,5 @@ router = APIRouter()
 
 @router.get("/")
 def get_root():
-    return "Animal API"
+    return "Student API"
 
