@@ -1,4 +1,4 @@
-# routes/animal_route.py
+# routes/student_route.py
 from fastapi import APIRouter
 from studentModel import StudentModel
 from studentsList import studentsList
